@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 08:53:58 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:53:43 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 	Expected files   : str_capitalizer.c
 	Allowed functions: write
 	---------------------------------------------------------------------------
-
 	Write a program that takes one or several strings and, for each argument,
 	capitalizes the first character of each word (If it's a letter, obviously),
 	puts the rest in lowercase, and displays the result on the standard output,
 	followed by a \n.
-
 	A "word" is defined as a part of a string delimited either by spaces/tabs, or
 	by the start/end of the string. If a word only has one letter, it must be
 	capitalized.
-
 	If there are no arguments, the progam must display \n.
 
 	Example:
-
 	$> ./str_capitalizer | cat -e
 	$
 	$> ./str_capitalizer "a FiRSt LiTTlE TESt" | cat -e
@@ -37,5 +33,4 @@
 	But... This Is Not That Complex$
 		Okay, This Is The Last 1239809147801 But Not    The Least    T$
 	$>
-
 */

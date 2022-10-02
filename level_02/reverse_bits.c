@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:56:05 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 	example) and returns the result.
 
 	Your function must be declared as follows:
-	unsigned char	reverse_bits(unsigned char octet);
+		unsigned char	reverse_bits(unsigned char octet);
 
 	Example:
 

@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 08:54:07 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 09:03:42 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 	Expected files   : tab_mult.c
 	Allowed functions: write
 	---------------------------------------------------------------------------
-
-	Write a program that displays a number's multiplication table.
-
-	The parameter will always be a strictly positive number that fits in an int,
+	Write a program that displays a number's multiplication table. The
+	parameter will always be a strictly positive number that fits in an int,
 	and said number times 9 will also fit in an int.
-
 	If there are no parameters, the program displays \n.
 
 	Examples:
-
 	$>./tab_mult 9
 	1 x 9 = 9
 	2 x 9 = 18

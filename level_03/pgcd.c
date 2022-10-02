@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 08:50:59 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,11 @@
 	---------------------------------------------------------------------------
 
 	Write a program that takes two strings representing two strictly positive
-	integers that fit in an int.
-
-	Display their highest common denominator followed by a newline (It's always a
-	strictly positive integer).
-
+	integers that fit in an int. Display their highest common denominator
+	followed by a newline (It's always a strictly positive integer).
 	If the number of parameters is not 2, display a newline.
 
 	Examples:
-
 	$> ./pgcd 42 10 | cat -e
 	2$
 	$> ./pgcd 42 12 | cat -e

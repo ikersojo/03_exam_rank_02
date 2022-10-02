@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 08:53:32 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:53:43 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,15 @@
 	Expected files   : rstr_capitalizer.c
 	Allowed functions: write
 	---------------------------------------------------------------------------
-
-	Write a program that takes one or more strings and, for each argument, puts 
+	Write a program that takes one or more strings and, for each argument, puts
 	the last character that is a letter of each word in uppercase and the rest
 	in lowercase, then displays the result followed by a \n.
-
-	A word is a section of string delimited by spaces/tabs or the start/end of the
-	string. If a word has a single letter, it must be capitalized.
-
-	A letter is a character in the set [a-zA-Z]
-
+	A word is a section of string delimited by spaces/tabs or the start/end of
+	the string. If a word has a single letter, it must be capitalized.
+	A letter is a character in the set [a-zA-Z].
 	If there are no parameters, display \n.
 
 	Examples:
-
 	$> ./rstr_capitalizer | cat -e
 	$
 	$> ./rstr_capitalizer "a FiRSt LiTTlE TESt" | cat -e
@@ -37,5 +32,4 @@
 	but... thiS iS noT thaT compleX$
 		okay, thiS iS thE lasT 1239809147801 buT noT    thE leasT    T$
 	$>
-
 */

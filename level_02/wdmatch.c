@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:58:43 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 	Allowed functions: write
 	---------------------------------------------------------------------------
 	Write a program that takes two strings and checks whether it's possible to
-	write the first string with characters from the second string, while respecting
-	the order in which these characters appear in the second string.
-	If it's possible, the program displays the string, followed by a \n, otherwise
-	it simply displays a \n.
+	write the first string with characters from the second string, while
+	respecting the order in which these characters appear in the second string.
+	If it's possible, the program displays the string, followed by a \n,
+	otherwise it simply displays a \n.
 	If the number of arguments is not 2, the program displays a \n.
 
 	Examples:
-
 	$>./wdmatch "faya" "fgvvfdxcacpolhyghbreda" | cat -e
 	faya$
 	$>./wdmatch "faya" "fgvvfdxcacpolhyghbred" | cat -e

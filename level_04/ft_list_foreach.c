@@ -6,24 +6,20 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:41:22 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 13:43:52 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 09:03:42 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*	Assignment name  : ft_list_foreach
 	Expected files   : ft_list_foreach.c, ft_list.h
 	Allowed functions: 
-	--------------------------------------------------------------------------------
-
+	---------------------------------------------------------------------------
 	Write a function that takes a list and a function pointer, and applies this
 	function to each element of the list.
-
 	It must be declared as follows:
-
-	void    ft_list_foreach(t_list *begin_list, void (*f)(void *));
+		void	ft_list_foreach(t_list *begin_list, void (*f)(void *));
 
 	The function pointed to by f will be used as follows:
-
 	(*f)(list_ptr->data);
 
 	You must use the following structure, and turn it in as a file called

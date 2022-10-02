@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 08:47:08 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 	Expected files   : ft_list_size.c, ft_list.h
 	Allowed functions: 
 	---------------------------------------------------------------------------
-	Write a function that returns the number of elements in the linked list that's
-	passed to it.
+	Write a function that returns the number of elements in the linked list
+	that's passed to it.
 
 	It must be declared as follows:
 		int	ft_list_size(t_list *begin_list);

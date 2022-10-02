@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:55:52 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 	Expected files   : print_bits.c
 	Allowed functions: write
 	---------------------------------------------------------------------------
-	Write a function that takes a byte, and prints it in binary WITHOUT A NEWLINE
-	AT THE END.
-
+	Write a function that takes a byte, and prints it in binary WITHOUT A
+	NEWLINE AT THE END.
 	Your function must be declared as follows:
-	void	print_bits(unsigned char octet);
+		void	print_bits(unsigned char octet);
 
 	Example, if you pass 2 to print_bits, it will print "00000010"
 */
