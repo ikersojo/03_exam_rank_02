@@ -31,7 +31,7 @@ Once you login, it will provide the first random question from level 01.
 
 Leave this terminal open and only use it grade the projects/questions.
 
-## Submit questions:
+## Submit questions:
 Open new terminal and code editor.
 You can find your exam subject in the directory ~/subject.
 Then you can see directory ~/Rendu. It is your git repository to submit the questions.
