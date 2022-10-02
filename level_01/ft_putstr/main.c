@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:15:35 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Created: 2022/10/02 17:41:35 by isojo-go          #+#    #+#             */
+/*   Updated: 2022/10/02 17:46:46 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	Assignment name  : ft_strlen
-	Expected files   : ft_strlen.c
-	Allowed functions: 
-	---------------------------------------------------------------------------
-	Write a function that returns the length of a string.
+void	ft_putstr(char *str);
+void	ft_putchar(char c);
 
-	Your function must be declared as follows:
-		int		ft_strlen(char *str);
-*/
+int	main(int argc, char **argv)
+{
+	char	*s;
+
+	s = *(argv + 1);
+	if (argc == 2)
+	{
+		ft_putstr(s);
+		ft_putchar('\n');
+	}
+	return (0);
+}
