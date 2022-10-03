@@ -110,4 +110,4 @@ When you are ready go in Rendu and push the directory by doing the following:
 - sort_list
 
 # BONUS: Exam Practice
-Practice the exam just like you would in the real exam - https://github.com/JCluzet/42_EXAM
+Practice the exam just like you would in the real exam - https://github.com/JCluzet/42_GradeMe
