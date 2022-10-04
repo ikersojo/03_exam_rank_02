@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:20:20 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/03 21:01:49 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,45 @@
 	$> ./rev_print | cat -e
 	$
 */
+
+#include <unistd.h>
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	if (str == 0)
+		return (0);
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putrstr(char *str)
+{
+	int	i;
+
+	i = ft_strlen(str) - 1;
+	while (i >= 0)
+	{
+		ft_putchar(*(str + i));
+		i--;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	char	*s;
+
+	s = *(argv + 1);
+	if (argc == 2)
+		ft_putrstr(s);
+	ft_putchar('\n');
+	return (0);
+}

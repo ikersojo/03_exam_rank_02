@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:22:11 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/04 15:35:56 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,41 @@
 	$>
 */
 
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *s)
+{
+	int		i;
+	char	c;
+
+	i = 0;
+	while (*(s + i))
+	{
+		c = *(s + i);
+		if ((c >= 'a' && c <= 'y') || (c >= 'A' && c <= 'Y'))
+			ft_putchar(c + 1);
+		else if (( c == 'z') || (c == 'Z'))
+			ft_putchar(c - 25);
+		else
+			ft_putchar(c);
+		i++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	char	*s;
+
+	s = *(argv + 1);
+	if (argc == 2)
+	{
+		ft_putstr(s);
+	}
+	ft_putchar('\n');
+	return (0);
+}
