@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:53:18 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:29:21 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,42 @@
 	$
 */
 
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_tosnake(char *s)
+{
+	int		i;
+	char	c;
+
+	i = 0;
+	while (*(s + i))
+	{
+		c = *(s + i);
+		if (c >= 'A' && c <= 'Z')
+		{
+			ft_putchar('_');
+			ft_putchar(c + ('a' - 'A'));
+		}
+		else if (c != ' ')
+			ft_putchar(c);
+		i++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	char	*s;
+
+	s = *(argv + 1);
+	if (argc == 2)
+	{
+		ft_tosnake(s);
+	}
+	ft_putchar('\n');
+	return (0);
+}

@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:54:06 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Created: 2022/09/30 15:54:27 by isojo-go          #+#    #+#             */
+/*   Updated: 2022/10/06 16:54:48 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	Assignment name  : ft_atoi
-	Expected files   : ft_atoi.c
-	Allowed functions: None
+/*	Assignment name  : ft_strcmp
+	Expected files   : ft_strcmp.c
+	Allowed functions:
 	---------------------------------------------------------------------------
-	Write a function that converts the string argument str to an integer (type
-	int) and returns it.
-	It works much like the standard atoi(const char *str) function, see man.
+	Reproduce the behavior of the function strcmp (man strcmp).
 
 	Your function must be declared as follows:
-		int		ft_atoi(const char *str);
+		int		ft_strcmp(char *s1, char *s2);
 */
 
+int	ft_strcmp(char *s1, char *s2)
+{
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}

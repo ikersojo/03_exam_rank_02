@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:54:27 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Created: 2022/10/06 17:27:08 by isojo-go          #+#    #+#             */
+/*   Updated: 2022/10/06 17:34:31 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	Assignment name  : ft_strcmp
-	Expected files   : ft_strcmp.c
-	Allowed functions:
-	---------------------------------------------------------------------------
-	Reproduce the behavior of the function strcmp (man strcmp).
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-	Your function must be declared as follows:
-		int		ft_strcmp(char *s1, char *s2);
-*/
+char	*ft_strdup(char *src);
 
+int	main(int argc, char **argv)
+{
+	char	*s1;
+	char	*s2;
+
+	if (argc == 2)
+	{
+		s1 = ft_strdup(*(argv + 1));
+		s2 = strdup(*(argv + 1));
+		printf("ft_strcmp: %s\n c_strcmp: %s\n", s1, s2);
+		free(s1);
+		free(s2);
+	}
+	return (0);
+}

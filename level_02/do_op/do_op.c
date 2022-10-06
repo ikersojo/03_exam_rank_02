@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:53:43 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/06 15:43:57 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,37 @@
 	$> ./do_op | cat -e
 	$
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int	ft_op(int a, int b, char op)
+{
+	if (op == '+')
+		return (a + b);
+	else if (op == '-')
+		return (a - b);
+	else if (op == '*')
+		return (a * b);
+	else if (op == '/')
+		return (a / b);
+	else
+		return (0);
+}
+
+int	main(int argc, char **argv)
+{
+	int	num1;
+	int	num2;
+	int	res;
+
+	if (argc == 4)
+	{
+		num1 = atoi(*(argv + 1));
+		num2 = atoi(*(argv + 3));
+		res = ft_op(num1, num2, **(argv + 2));
+		printf("%d", res);
+	}
+	printf("\n");
+	return (0);
+}
