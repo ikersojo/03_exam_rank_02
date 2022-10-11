@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   is_power_of_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/30 15:55:02 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:04:39 by isojo-go         ###   ########.fr       */
+/*   Created: 2022/09/30 15:55:29 by isojo-go          #+#    #+#             */
+/*   Updated: 2022/10/10 20:52:16 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	Assignment name  : ft_strrev
-	Expected files   : ft_strrev.c
-	Allowed functions:
+/*	Assignment name  : is_power_of_2
+	Expected files   : is_power_of_2.c
+	Allowed functions: None
 	---------------------------------------------------------------------------
-	Write a function that reverses (in-place) a string.
-	It must return its parameter.
+	Write a function that determines if a given number is a power of 2. 
+	This function returns 1 if the given number is a power of 2, otherwise it
+	returns 0.
 
 	Your function must be declared as follows:
-	char	*ft_strrev(char *str);
+		int		is_power_of_2(unsigned int n);
 */
+
+int	is_power_of_2(unsigned int n)
+{
+	if (!(n == 0) && !(n & (n - 1)))
+		return (1);
+	return (0);
+}

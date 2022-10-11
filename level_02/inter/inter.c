@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:55:19 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/10 20:39:20 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,67 @@
 	$>./inter | cat -e
 	$
 */
+
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	ft_ischarset(char c, char *str)
+{
+	while (*str)
+	{
+		if (*str == c)
+			return (1);
+		str++;
+	}
+	return (0);
+}
+
+int	ft_isprinted(int i, char *str)
+{
+	int	j;
+
+	j = 0;
+	while (*(str + j) && (j < i))
+	{
+		if (*(str + j) == *(str + i))
+			return (1);
+		j++;
+	}
+	return (0);
+}
+
+void	ft_putstr(char *s1, char *s2)
+{
+	int		i;
+	char	c;
+
+	i = 0;
+	while (*(s1 + i))
+	{
+		c = *(s1 + i);
+		if (ft_ischarset(*(s1 + i), s2) && !ft_isprinted(i, s1))
+		{
+			ft_putchar(c);
+		}
+		i++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	char	*s1;
+	char	*s2;
+
+	if (argc == 3)
+	{
+		s1 = *(argv + 1);
+		s2 = *(argv + 2);
+		ft_putstr(s1, s2);
+	}
+	ft_putchar('\n');
+	return (0);
+}
