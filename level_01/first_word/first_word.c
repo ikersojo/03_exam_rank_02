@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:09:31 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/02 17:28:33 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:24:09 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ int	main(int argc, char **argv)
 	char	*s;
 	int		i;
 
-	s = *(argv + 1);
 	if (argc == 2)
 	{
+		s = *(argv + 1);
 		i = 0;
 		while (*(s + i) && (ft_isspace(*(s + i))))
 			i++;

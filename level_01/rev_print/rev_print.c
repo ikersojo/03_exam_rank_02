@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:20:20 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/03 21:01:49 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:23:17 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,9 +62,11 @@ int	main(int argc, char **argv)
 {
 	char	*s;
 
-	s = *(argv + 1);
 	if (argc == 2)
+	{
+		s = *(argv + 1);
 		ft_putrstr(s);
+	}
 	ft_putchar('\n');
 	return (0);
 }
