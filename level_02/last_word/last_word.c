@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:55:38 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:51:56 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,54 @@
 	lorem,ipsum$
 	$>
 */
+
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	ft_isspace(char c)
+{
+	if ((c >= 9 && c <= 13) || c == 32)
+		return (1);
+	return (0);
+}
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
+}
+
+void	ft_putstr(char *str)
+{
+	int		i;
+
+	i = ft_strlen(str) - 1;
+	while (ft_isspace(*(str + i)) && i >= 0)
+		i--;
+	while (!ft_isspace(*(str + i)) && i >= 0)
+		i--;
+	i++;
+	while (*(str + i) && !ft_isspace(*(str + i)))
+		ft_putchar(*(str + i++));
+}
+
+int	main(int argc, char **argv)
+{
+	char	*s;
+
+	if (argc == 2)
+	{
+		s = *(argv + 1);
+		ft_putstr(s);
+	}
+	ft_putchar('\n');
+	return (0);
+}

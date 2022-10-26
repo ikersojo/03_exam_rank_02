@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:58:35 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/26 14:17:04 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,70 @@
 	$>
 */
 
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
+}
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (*str++)
+		len++;
+	return (len);
+}
+
+int	ft_repeated(char *str, char c, int i)
+{
+	int		j;
+
+	j = 0;
+	while (j < i)
+	{
+		if (*(str + j) == c)
+			return (1);
+		j++;
+	}
+	return (0);
+}
+
+void	ft_putstr(char *s1, char *s2)
+{
+	int	i;
+	int	len1;
+
+	i = 0;
+	while (*(s1 + i))
+	{
+		if (!ft_repeated(s1, *(s1 + i), i))
+			ft_putchar(*(s1 + i));
+		i++;
+	}
+	len1 = i;
+	i = 0;
+	while (*(s2 + i))
+	{
+		if (!ft_repeated(s2, *(s2 + i), i) && !ft_repeated(s1, *(s2 + i), len1))
+			ft_putchar(*(s2 + i));
+		i++;
+	}
+}
+
+int	main(int argc, char **argv)
+{
+	char	*s1;
+	char	*s2;
+
+	if (argc == 3)
+	{
+		s1 = *(argv + 1);
+		s2 = *(argv + 2);
+		ft_putstr(s1, s2);
+	}
+	ft_putchar('\n');
+	return (0);
+}

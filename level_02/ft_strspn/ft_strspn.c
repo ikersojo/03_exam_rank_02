@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:55:11 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/01 09:36:29 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:04:22 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,31 @@
 	The function should be prototyped as follows:
 		size_t	ft_strspn(const char *s, const char *accept);
 */
+
+#include <string.h>
+
+int	ft_ischarset(char c, char *set)
+{
+	while (*set)
+	{
+		if (c == *set)
+			return (1);
+		set++;
+	}
+	return (0);
+}
+
+size_t	ft_strspn(const char *s, const char *accept)
+{
+	size_t	i;
+
+	i = 0;
+	while (*((char *)s + i))
+	{
+		if (ft_ischarset(*((char *)s + i), (char *)accept))
+			i++;
+		else
+			break ;
+	}
+	return (i);
+}
