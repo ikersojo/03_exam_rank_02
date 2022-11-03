@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:36:10 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/11/01 20:34:28 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/11/03 08:37:48 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,7 @@
 */
 
 #include <stdlib.h>
-
-int	ft_abs(int n)
-{
-	if (n < 0)
-		return (n * -1);
-	return (n);
-}
+#include <stdio.h>
 
 char	*ft_strcpy(char *dst, char *src)
 {
@@ -66,7 +60,10 @@ char	ft_digitcount(int n)
 	if (n == 0)
 		return (1);
 	if (n < 0)
+	{
 		sign = 1;
+		n = n * -1;
+	}
 	while (n > 0)
 	{
 		n = n / 10;
@@ -79,21 +76,26 @@ char	*ft_itoa(int nbr)
 {
 	char	digits;
 	char	*str;
+	int		sign;
 
+	sign = 0;
 	if (nbr == -2147483648)
 		return (case_minint());
 	digits = ft_digitcount(nbr);
 	str = (char *)malloc(sizeof(char) * (digits));
 	if (str == NULL)
 		return (NULL);
-	digits--;
-	while (digits > 0)
+	if (nbr < 0)
+	{
+		nbr = nbr * -1;
+		*str = '-';
+		sign = 1;
+	}
+	*(str + digits) = '\0';
+	while (--digits - sign >= 0)
 	{
 		*(str + digits) = (nbr % 10) + '0';
 		nbr = nbr / 10;
-		digits--;
 	}
-	if (nbr < 0)
-		*str = '-';
 	return (str);
 }
