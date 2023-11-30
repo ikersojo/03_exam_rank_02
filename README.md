@@ -1,28 +1,36 @@
 # 03_exam_rank_02
 
+## Results:
+
+<img src="_doc/exam_rank_02_res.png"/>
+
 ## Exam Description
 
 The exam has 4 questions, one random question for each level listed below.
-There is no requirement to meet the norm (i.e. no norminette check). 
-
+There is no requirement to meet the norm (i.e. no norminette check).
 
 ## Initialize the exam
+
 Login to the mac (configured as "exam-machine") with the follwoing user:
+
 - login -> exam
 - password -> exam
 
 Open iterm2 and enter the following command:
+
 ```console
 examshell
 ```
 
 Login using your username and password:
+
 - login -> your 42 intra username.
 - pasword -> your 42 intra password.
 
 Allow photo check.
 
 In the examshell, you have only the following 3 commands:
+
 - status - check the time and other things
 - grademe - checking pushed exercise (moulinet)
 - finish - closing examshell and finish exam
@@ -32,6 +40,7 @@ Once you login, it will provide the first random question from level 01.
 Leave this terminal open and only use it grade the projects/questions.
 
 ## Submit questions:
+
 Open new terminal and code editor.
 You can find your exam subject in the directory ~/subject.
 Then you can see directory ~/Rendu. It is your git repository to submit the questions.
@@ -44,7 +53,9 @@ When you are ready go in Rendu and push the directory by doing the following:
 4. After the git push, type `grademe`
 
 ## Exam Questions
+
 ## Level 1
+
 - first_word
 - fizzbuzz
 - ft_strcpy
@@ -56,9 +67,10 @@ When you are ready go in Rendu and push the directory by doing the following:
 - rot_13
 - rotone
 - search_and_replace
-- ulstr 
+- ulstr
 
 ## Level 2
+
 - alpha_mirror
 - camel_to_snake
 - do_op
@@ -78,9 +90,10 @@ When you are ready go in Rendu and push the directory by doing the following:
 - snake_to_camel
 - swap_bits
 - union
-- wdmatch 
+- wdmatch
 
 ## Level 3
+
 - add_prime_sum
 - epur_str
 - expand_str
@@ -95,9 +108,10 @@ When you are ready go in Rendu and push the directory by doing the following:
 - print_hex
 - rstr_capitalizer
 - str_capitalizer
-- tab_mult 
+- tab_mult
 
 ## Level 4
+
 - flood_fill
 - fprime
 - ft_itoa
@@ -109,5 +123,6 @@ When you are ready go in Rendu and push the directory by doing the following:
 - sort_int_tab
 - sort_list
 
-# BONUS: Exam Practice
-Practice the exam just like you would in the real exam - https://github.com/JCluzet/42_GradeMe
+# Exam Practice Tool
+
+Practice the exam in https://grademe.fr

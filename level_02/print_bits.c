@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:55:52 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/11/03 09:58:46 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,28 +22,16 @@
 	Example, if you pass 2 to print_bits, it will print "00000010"
 */
 
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
-void	print_bits(unsigned char octet)
+void print_bits(unsigned char octet)
 {
-	int shift = 7;
-	unsigned char mask = 1;
-	char out;
+	int	i = 8;
+	unsigned char 	bit;
 
-	while (shift >= 0)
+	while (i--)
 	{
-		out = ((octet >> shift) & mask) + '0';
-		write(1, &out, 1);
-		--shift;
+		bit = (octet >> i & 1) + '0';
+		write(1, &bit, 1);
 	}
 }
-
-#if 0
-int	main(void)
-{
-	print_bits(2);
-	write(1, "\n", 1);
-}
-#endif

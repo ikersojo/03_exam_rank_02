@@ -6,7 +6,7 @@
 /*   By: isojo-go <isojo-go@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:58:25 by isojo-go          #+#    #+#             */
-/*   Updated: 2022/10/02 08:52:58 by isojo-go         ###   ########.fr       */
+/*   Updated: 2022/11/03 09:59:58 by isojo-go         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,7 @@
 	 0001 | 0100
 */
 
-// Passed Moulinette 2019.09.02
-
 unsigned char	swap_bits(unsigned char octet)
 {
-	unsigned char result;
-	unsigned char new_left_4_bits;
-	unsigned char new_right_4_bits;
-
-	new_left_4_bits = octet >> 4;
-	new_right_4_bits = octet << 4;
-	result = new_left_4_bits | new_right_4_bits;
-	return (result);
+	return ((octet >> 4) | (octet << 4));
 }
-
-//--------------------------------------------------------------
-// #include <stdio.h>
-// int				main(void)
-// {
-// 	unsigned char test = 192;
-// 	printf("Should be 12: %d\n", swap_bits(test));
-// }
